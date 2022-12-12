@@ -1,0 +1,11 @@
+[Unit]
+Description=A service to start the OrderIdentifier script for smoothie
+After=smoothieOrderDownload.service
+
+[Service]
+User=mcmaster
+ExecStart=/home/mcmaster/Documents/smoothie/ImportantPrograms/boot/OrderIdentifierV4.sh
+RestartSec=100ms
+
+[Install]
+WantedBy=smoothieQueueManager.service

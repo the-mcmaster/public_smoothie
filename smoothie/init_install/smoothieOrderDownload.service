@@ -1,0 +1,12 @@
+[Unit]
+Description=A service to start the OrderDownload script for smoothie
+After=network.target
+Requires=network.target
+
+[Service]
+User=mcmaster
+ExecStart=/home/mcmaster/Documents/smoothie/ImportantPrograms/boot/OrderDownload.sh
+RestartSec=100ms
+
+[Install]
+WantedBy=smoothieOrderIdentifier.service
